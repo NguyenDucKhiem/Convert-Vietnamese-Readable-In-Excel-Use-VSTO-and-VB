@@ -1,0 +1,7 @@
+Function ConvertNumber(cell As Range) As String
+    Dim addIn As COMAddIn
+    Dim automationObject As Object
+    Set addIn = Application.COMAddIns("ExcelImportData")
+    Set automationObject = addIn.Object
+    ConvertNumber = automationObject.ImportData(cell)
+End Function
